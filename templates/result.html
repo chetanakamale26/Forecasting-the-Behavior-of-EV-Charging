@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electric Vehicle Remaining Hours Calculator - Result</title>
+<style>
+		body {
+			background-image: url('{{ url_for('static', filename='img/1.jpg') }}');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin: 50px;
+			background-color: rgba(255, 255, 255, 0.5);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			color: #333;
+			font-size: 18px;
+			font-family: Arial, sans-serif;
+			max-width: 400px;
+		}
+		
+		input[type=text] {
+			padding: 10px;
+			font-size: 16px;
+			border: none;
+			background-color: #eee;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			margin-bottom: 10px;
+			width: 100%;
+			color: #333;
+			outline: none;
+		}
+		
+		input[type=submit] {
+			padding: 10px 20px;
+			font-size: 18px;
+			background-color: #4286f4;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+		
+		input[type=submit]:hover {
+			background-color: #0066cc;
+		}
+	</style>
+</head>
+<body>
+    <H1><CENTER>FORCASTING THE BEHAVIOUR OF EV CHARGING</CENTER></H1>
+    <h1>Result</h1>
+    <p><h3>Accuracy: {{ ac }} </h3></p>
+    <p><h3>Performance: {{ f_stat }} </h3></p>
+ <p><h3>Remaining hours: {{ remaining_hours }} Hrs.</h3></p>
+
+    <p><h3>STATE: {{ state }} </h3></p>
+	
+   
+</body>
+</html>

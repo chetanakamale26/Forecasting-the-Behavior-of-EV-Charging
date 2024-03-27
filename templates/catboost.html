@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Electric Efficiency Analyzer</title>
+	<style>
+		body {
+			background-image: url('{{ url_for('static', filename='img/1.jpg') }}');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin: 50px;
+			background-color: rgba(255, 255, 255, 0.5);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			color: #333;
+			font-size: 18px;
+			font-family: Arial, sans-serif;
+			max-width: 400px;
+		}
+		
+		input[type=text] {
+			padding: 10px;
+			font-size: 16px;
+			border: none;
+			background-color: #eee;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			margin-bottom: 10px;
+			width: 100%;
+			color: #333;
+			outline: none;
+		}
+		
+		input[type=submit] {
+			padding: 10px 20px;
+			font-size: 18px;
+			background-color: #4286f4;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+		
+		input[type=submit]:hover {
+			background-color: #0066cc;
+		}
+	</style>
+</head>
+<body><H1><center>FORCASTING THE BEHAVIOUR OF EV CHARGING</center></H1>
+	<form method="post" action="{{ url_for('calculate') }}">
+		<label for="weather">Weather:</label>
+		<input type="text" name="weather" id="weather" required>
+		<label for="traffic">Traffic:</label>
+		<input type="text" name="traffic" id="traffic" required>
+		<label for="speed">Speed:</label>
+		<input type="text" name="speed" id="speed" required>
+		<input type="submit" value="PREDICT" value="Calculate">
+	</form>
+
+	<!--<p id="result"></p>
+
+	<script>
+		function calculate() {
+			var weather = parseInt(document.getElementById('weather').value);
+			var traffic = parseInt(document.getElementById('traffic').value);
+			var speed = parseInt(document.getElementById('speed').value);
+
+			var distance = 500; // example distance in miles
+			var travelTime = distance / speed; // in hours
+			var totalTime = travelTime + weather + traffic;
+
+			document.getElementById('result').innerHTML = "Total travel time: " + totalTime.toFixed(2) + " hours";
+		}
+	</script>-->
+</body>
+</html>
